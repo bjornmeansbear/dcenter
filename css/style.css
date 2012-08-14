@@ -1,0 +1,293 @@
+/* D CENTER CUSTOM STYLES
+=========================================================*/
+
+/* General
+=========================================================*/
+.left        {float:left;}
+.right       {float:right;}
+.clear       {clear:both;}
+.clearLeft   {clear:both;}
+.clearRight  {clear:both;}
+
+/* Typography
+=========================================================*/
+
+p {
+	font-size:14px;
+	line-height:24px;
+}
+
+p.name {
+	font-weight:bold;
+	color:#424242;
+}
+
+p.position {
+	color:#868080;
+	font-weight:bold;
+}
+
+h2.title {
+	font-weight:bold;
+	color:#424242;
+	padding-bottom:15px;
+	border-bottom:2px solid #424242;
+}
+
+
+
+/* Main Layout
+=========================================================*/
+div.page, footer {
+	margin: 0 auto;
+	width: 984px;
+  /**/
+/*   background: url(i/960px-8col-99w-24gut.png) top center repeat-y; */
+}
+
+/* columns */
+.column                    { margin:0 12px; }
+.columns                   { float: left; margin: 0 12px; }
+.columns .columns          { margin-left:0; }
+
+.one                       { width:  99px; }
+.two, .quarterWidth        { width: 222px; }
+.three                     { width: 345px; }
+.four, .halfWidth          { width: 468px; }
+.five                      { width: 591px; }
+.six, .threeQuarterWidth   { width: 714px; }
+.seven                     { width: 837px; }
+.eight, fullWidth          { width: 960px; }
+
+/* Type */
+html, body {
+	font-family: "Helvetica Neue", helvetica, Arial, sans-serif;
+	background:#f4f4f4;
+}
+
+header hgroup h1 {
+	font-family: "AWConquerorInline-regular", "Helvetica Neue", helvetica, Arial, sans-serif;
+	font-size: 4em;
+	margin-top: .33em;
+}
+
+#header2 {
+	margin: 0 auto;
+	width:984px;
+}
+
+/* links */
+a {
+	text-decoration:none;
+	color:#424242;
+	line-height:24px;
+	font-weight:bold;
+}
+
+a:hover {
+	text-decoration:none;
+}
+
+.logo a:hover {
+	border-bottom:none;
+}
+
+a.active,
+a.active-trail {
+	font-weight:bold;
+	color:#424242;
+}
+
+/* Side-Bar layout tweaks */
+div.page {position: relative;}
+body.one-sidebar.sidebar-second div#main {
+	float: left;
+	left: 0;
+	margin: 0;
+/*   margin-right: 246px; */
+	position: relative;
+	top:0;
+	width: 738px;
+	background:#fff;
+}
+
+body.one-sidebar.sidebar-second div.sidebar-two {
+	float: right;
+	margin: 0;
+	position: relative;
+	width: 222px;
+}
+
+
+/* Header Styles
+=========================================================*/
+header {
+	margin-top: 48px;
+}
+
+#wrap {
+	width:100%;
+	background:#f4f4f4;
+}
+
+	header figure.logo {
+	float: left;
+	margin: 0 12px 12px 0;
+	width: 222px;
+}
+
+header figure.logo img {
+	width: 222px;
+}
+
+header hgroup {
+	margin-left: 258px;
+}
+
+
+
+/* main menu */
+header nav {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	left: -12px;
+	width: 984px;  
+}
+
+header nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+header nav ul li {
+	list-style: block;
+	float: left;
+	padding:5px 10px;
+	font-size:16px;
+}
+
+header nav ul li:hover {
+	background:#f5ef62;
+}
+
+header nav ul li.active {
+	background:#f5ef62;
+}
+
+/* secondary menu */
+
+#secondary-menu {
+	font-size:16px;
+}
+
+#secondary-menu ul {
+
+}
+
+#secondary-menu li {
+	display: block;
+	padding: 5px 10px;
+	background:#f5ef62;
+}
+
+#secondary-menu li:hover {
+	background:#f4f4f4;
+}
+
+
+
+
+
+
+
+/* Main Page/Content Area Styles
+=========================================================*/
+div.page {
+	margin: 0px auto;
+	background:#fff;
+	padding-top:15px;
+	padding-bottom:20px;
+}
+
+#wrap_page {
+	width:100%;
+	background:#fff;
+}
+
+/* Footer Styles
+=========================================================*/
+footer {
+	padding-bottom:40px;
+	padding-top: 24px;
+	margin-top:0;
+	background:#424242;
+	color:#fff;
+}
+
+#foot_wrap {
+	width:100%;
+	background:#424242;
+}
+
+footer a {
+	color:#fff;
+}
+
+footer a.active {
+	color:#fff;
+}
+
+li.expanded ul{
+	margin-left:12px;
+}
+
+
+/* Frontpage Blocks
+=========================================================*/
+
+/* DConvo Blocks
+=========================================================*/
+.dconvo {
+	height: 198px;
+}
+
+.columns.dconvo.one {
+	width:225px;
+	background:#fff;
+	margin:0;
+	padding:10px;
+}
+
+/* Project Page
+=========================================================*/
+.project.bottomBorder {
+	border-bottom: 1px solid black;
+	margin-bottom: 36px;
+	padding-bottom: 12px;
+}
+
+/* Board member page
+=========================================================*/
+div.boardmember {
+	margin: 12px 0;
+}
+
+div.boardmember p.name{
+	font-size: 1.25em;
+}
+
+div.boardmember {
+	padding-bottom:13px;
+	border-bottom:2px solid #424242;
+}
+
+
+
+
+/* Display: None Hack
+=========================================================*/
+#main h1 {display: none;}
