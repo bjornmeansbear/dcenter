@@ -19,7 +19,7 @@
         ?>
       </a>
     </figure>
-  
+   
   	<?php if($site_name OR $site_slogan ): ?>
     <hgroup>
   		<?php if($site_name): ?>
