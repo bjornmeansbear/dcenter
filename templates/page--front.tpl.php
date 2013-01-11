@@ -77,51 +77,17 @@
 
   <div id="wrap_page">
   <div class="page cf">
-    <?php if ($page['sidebar_first']): ?>
-      <div class="sidebar-one">
-      <?php print render($page['sidebar_first']); ?>
+    <div class="triptych">
+      <div class="one-third columns">
+      <?php print render($page['trip1']); ?>
       </div>
-    <?php endif; ?>
-  
-    <div id="main" role="main" class="main content">
-      <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
-        <h1><?php print $title; ?></h1>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
-  
-<!--       <?php print $breadcrumb; ?> -->
-  
-      <?php if ($action_links): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-  
-      <?php if ($tabs): ?>
-        <nav class="tabs"><?php print render($tabs); ?></nav>
-      <?php endif; ?>
-  
-      <?php if($page['highlighted'] OR $messages){ ?>
-        <div class="drupal-messages">
-        <?php print render($page['highlighted']); ?>
-        <?php print $messages; ?>
-        </div>
-      <?php } ?>
-  
-      <?php print render($page['content_pre']); ?>
-  
-      <?php print render($page['content']); ?>
-  
-      <?php print render($page['content_post']); ?>
-      
-     
-    </div><!--/main-->
-
-    <?php if ($page['sidebar_second']): ?>
-      <div class="sidebar-two">
-        <?php print render($page['sidebar_second']); ?>
+      <div class="one-third columns">
+      <?php print render($page['trip2']); ?>
       </div>
-    <?php endif; ?>
-
+      <div class="one-third columns last">
+      <?php print render($page['trip3']); ?>
+      </div>
+    </div>
   </div><!--/page-->
   </div>
   
