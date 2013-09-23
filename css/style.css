@@ -237,6 +237,7 @@ header nav ul {
 }
 
 header nav ul li {
+  display: block;
   list-style: block;
   float: left;
 }
@@ -261,6 +262,38 @@ header nav ul li.active {
 #secondary-menu li.active {
   background:#f4f4f4;
 }
+
+/* Special Facebook + Twitter links */
+header nav li.menu-574, 
+header nav li.menu-574 a, 
+header nav li.menu-575,
+header nav li.menu-575 a {
+  display: block;
+  height:34px;
+  width:34px;
+  padding:0;
+} 
+
+header nav li.menu-574, 
+header nav li.menu-575 {
+  float:right;
+  margin: 0 0 0 12px;
+}
+
+header nav li.menu-574 a, 
+header nav li.menu-575 a {
+  background: url(i/dc-tfb-sprite.png) left top no-repeat;
+  overflow: hidden;
+  text-indent: -999999px;
+}
+
+header nav li.menu-575 a { background-position-x: -34px; }
+
+header nav li.menu-574 a:hover, 
+header nav li.menu-575 a:hover {
+  background-position-y: -34px;
+}
+
 /* END NAV MENUS */
 
 
@@ -279,8 +312,12 @@ div.page {
   width:100%;
 }
 
-.node-type-page #main article, 
-.node-type-projects #main article { margin: 0 12px; }
+.node-type-page #main article,
+.node-type-board-member #main article, 
+.node-type-projects #main article,
+#main .profile,
+#main #user-login 
+{ margin: 0 12px; }
 
 /* =Footer Styles
 =========================================================*/
@@ -292,7 +329,6 @@ div.page {
 footer {
   padding: 24px 0 40px 0;
 }
-
 
 footer a {
   color:#424242;
@@ -311,9 +347,9 @@ li.expanded ul{
 /* =Frontpage Blocks
 =========================================================*/
 div.header .fp {
-  border-bottom: 1px solid;
+/*   border-bottom: 1px solid; */
   border-top: 1px solid;
-  padding-bottom: 24px;
+/*   padding-bottom: 24px; */
   padding-top: 24px;
 }
 
@@ -364,8 +400,8 @@ div.header .fp p {
   width:19px;
   -webkit-border-radius:25px;
   text-align:center;
-  padding:3px;
-  
+  padding:2px;
+  line-height: 20px;
 }
 
 ul.dconvos {
@@ -483,42 +519,72 @@ h2.title.relative {
 
 /* =Project Page
 =========================================================*/
-.page-projects .project.bottomBorder {
+.page-projects .project.bottomBorder,
+.page-activities .project.bottomBorder {
   border-bottom: 1px solid black;
   margin-bottom: 36px;
   padding-bottom: 12px;
 }
 
-.page-projects .project .date {
+.page-projects .project .date,
+.page-activities .project .date {
   margin-top:10px;
   line-height:20px;
 }
 
-.page-projects .project .date span {
+.page-projects .project .date span,
+.page-activities .project .date span {
   display:block;
 }
 
-.page-projects .project .image .item-list {
+.page-projects .project .image .item-list,
+.page-activities .project .image .item-list {
   margin-top:10px;
 }
 
-.page-projects .project .title {
+.page-projects .project .title,   
+.page-activities .project .title {
   margin-bottom:10px;
 }
 
-.page-projects div.project {
+.page-projects div.project,
+.page-activities div.project {
   padding-bottom: 60px;
 }
 
 .page-projects div.project div.dates,
 .page-projects div.project div.image,
-.page-projects div.project h2.title {
+.page-projects div.project h2.title,
+.page-activities div.project div.dates,
+.page-activities div.project div.image,
+.page-activities div.project h2.title {
   border-top: 1px solid;
   padding-top: 10px;
 }
 
+div.project h2.title {
+  font-size: 16px;
+}
+
+div.project h2.title a,
+div.project .readMore a {
+border-bottom: 1px solid #fbf9c2;
+color: #424242;
+font-weight: bold;
+text-decoration: none;
+}
+
+div.project h2.title a:hover,
+div.project .readMore a:hover {
+  background: #fdfce2;
+  text-decoration:none;
+  border-bottom: 1px solid #424242;
+}
+
 .page-projects div.project div.dates,
-.page-projects div.project div.image {
+.page-projects div.project div.image,
+.page-activities div.project div.dates,
+.page-activities div.project div.image {
   padding-top: 40px;
 }
 
@@ -529,7 +595,10 @@ div.project div.image ul li {
   padding: 0;
 }
 
-.page-projects div.project .title, .page-projects div.project .body {
+.page-projects div.project .title, 
+.page-projects div.project .body,
+.page-activities div.project .title, 
+.page-activities div.project .body {
   margin-left: 504px;
   float: none;
 }
@@ -538,7 +607,22 @@ div.project div.image ul li {
   font-size: 17.5px;
   margin-bottom: 18px;
 }
-/* =Board member page
+
+/* individual project pages */
+
+.node-projects p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+.node-projects p:first-child {
+  font-size: 21px !important;
+  line-height: 30px !important;
+}
+
+
+/* =Board member page (&pages)
 =========================================================*/
 div.boardmember p.name { margin:0;}
 
@@ -551,6 +635,16 @@ div.boardmember {
 div.boardmember:last-child {
   border-bottom:none;
 }
+
+.node-type-board-member article .field-name-field-bio {
+  margin-top: 24px;
+}
+
+.node-type-board-member article .field-name-field-bio p {
+  font-size:16px;
+  line-height:28px;
+}
+
 
 /* =Contact Page Styles
 =========================================================*/
@@ -605,6 +699,72 @@ body.page-node-130 .sidebar-two {
   width: 468px !important;
 }
 
+/* Adding custom graphics to reference links
+=========================================================*/
+.reference .file a, .reference .url a, .view-taxonomy-blurb .url a {
+  display: block;
+  min-height:24px;
+  margin: 6px 0;
+  padding-left: 30px;
+  padding-top: 7px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.reference .file a {
+  background: url(i/glyphicons_036_file.png) left center no-repeat;
+}
+
+.url a {
+  background: url(i/glyphicons_060_compass.png) left center no-repeat;
+}
+
+/** Project and DConvo Pages extra imagery block */
+.sidebar-two .block-views-node-slideshows-block {
+  margin: 48px -12px 0;
+}
+
+.sidebar-two .block-views-node-slideshows-block h2.title {
+  margin: 0 12px;
+}
+
+.sidebar-two .block-views-node-slideshows-block .view-node-slideshows  {
+}
+
+.sidebar-two .block-views-node-slideshows-block .views-row {
+  float: left;
+  margin: 12px;
+  height:99px;
+  width:99px;
+}
+
+/* Presenter/Speaker page Styles */
+
+.field-name-field-speaker-presenter {
+  border-top: 1px solid;
+  margin-top: 36px;
+  margin-left: 135px;
+  padding-top: 12px;
+}
+
+.field-name-field-speaker-presenter div.field-item {
+  display: inline-block;
+  margin: 0 12px 12px 0;
+}
+
+.field-name-field-speaker-presenter div.field-item a {
+  border-bottom: 1px solid #fbf9c2;
+  color: #424242;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.field-name-field-speaker-presenter div.field-item a:hover {
+  background: #fdfce2;
+  text-decoration:none;
+  border-bottom: 1px solid #424242;
+}
+
 
 /* =Display: None Hack
 =========================================================*/
@@ -612,5 +772,6 @@ footer nav h2.title,
 .node-type-page #main h1,
 .page-dconvo #main h1,
 .page-projects #main h1,
+.page-activities #main h1,
 .page-contact #main h1
 {display: none;}

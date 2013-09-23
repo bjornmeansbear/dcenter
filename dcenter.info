@@ -32,9 +32,13 @@ regions[sidebar_first] = Sidebar First
 regions[sidebar_second] = Sidebar Second
 regions[help] = Help
 regions[highlighted] = Highlighted
+regions[trip1] = Homepage Triptych One
+regions[trip2] = Homepage Triptych Two
+regions[trip3] = Homepage Triptych Three
 
 ;-------------- C S S -------------
 stylesheets[all][] = css/style.css
+stylesheets[all][] = css/kbadd.css
 
 ;-------------- CSS FOAD -------------
 ;stylesheets[all][] = donteverloadmeagain.css
